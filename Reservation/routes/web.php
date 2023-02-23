@@ -26,4 +26,5 @@ Route::get('/reservation', function () {
     return view('home');
 });
 
+
 //Route::get('/reservation', \App\Http\Livewire\Reservation::class);

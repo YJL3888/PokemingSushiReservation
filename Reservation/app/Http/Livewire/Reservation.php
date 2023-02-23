@@ -21,29 +21,29 @@ class Reservation extends Component
         //dd($this->name, $this->nb_guests, $this->date);
         // dd('reserve function called');
 
-        // $data = $this->validate([
-        //     'name'=>'required|email|unique:reservation',
-        //     'nb_guests'=> 'required',
-        //     'date' => 'required',
+        $data = $this->validate([
+            'name'=>'required|email|unique:reservation',
+            'nb_guests'=> 'required',
+            'date' => 'required',
         
-        // ]);
+        ]);
 
-        // Reservation::create([
-        //     'name' => $data['name'],
-        //     'nb_guests' => $data['nb_guests'],
-        //     'date' => $data['date'],
-        // ]);
+        ReservationModel::create([
+            'name' => $data['name'],
+            'nb_guests' => $data['nb_guests'],
+            'date' => $data['date'],
+        ]);
 
-        try{
-            ReservationModel::create([
-                'name' => $this->name,
-                'nb_guests' => $this->nb_guests,
-                'date' => $this->date,
-            ]);
-            session()->flash('success','Post Created Successfully!!');
-        } catch (\Exception $ex) {
-            session()->flash('error','Something goes wrong!!');
-        }
+        // try{
+        //     ReservationModel::create([
+        //         'name' => $this->name,
+        //         'nb_guests' => $this->nb_guests,
+        //         'date' => $this->date,
+        //     ]);
+        //     session()->flash('success','Post Created Successfully!!');
+        // } catch (\Exception $ex) {
+        //     session()->flash('error','Something goes wrong!!');
+        // }
 
         // dump("Hello");
 
