@@ -15,7 +15,7 @@ use App\Http\Livewire\Reservation;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 // Route::get('/reservation',function(){
@@ -23,7 +23,7 @@ Route::get('/', function () {
 // });
 
 Route::get('/reservation', function () {
-    return view('home');
+    return view('reservationPage');
 });
 
 

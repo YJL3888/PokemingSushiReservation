@@ -1,6 +1,7 @@
 <html>
 <head>
 @livewireStyles
+@yield('headContent')
 
 </head>
 <body>
